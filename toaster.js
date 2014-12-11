@@ -200,6 +200,9 @@ function ($compile, $rootScope, $interval, $sce, toasterConfig, toaster) {
                 '<div ng-switch-when="template"><div ng-include="toaster.bodyTemplate"></div></div>' +
                 '<div ng-switch-default >{{toaster.body}}</div>' +
               '</div>' +
+              '<div ng-if="toaster.actions" class="island-sm">' +
+                '<button ng-repeat="action in toaster.actions" class="btn {{action.buttonStyle || \'btn-primary\'}}" ng-click="action.click();click(toaster, true)">{{action.text}}</button>' +
+              '</div>' +
             '</div>' +
         '</div>'
     };
