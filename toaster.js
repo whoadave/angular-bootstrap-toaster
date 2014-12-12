@@ -61,9 +61,10 @@
         //'extended-time-out': 1000,    // not implemented
         'time-out': 5000, // Set timeOut and extendedTimeout to 0 to make it sticky
         'icon-classes': {
-          error: 'bg-error',
+          primary: 'bg-primary',
           info: 'bg-info',
-          wait: 'bg-wait',
+          wait: 'bg-wait bg-info',
+          danger: 'bg-danger',
           success: 'bg-success',
           warning: 'bg-warning'
         },
