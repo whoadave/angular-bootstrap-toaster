@@ -154,13 +154,14 @@
                   for(var i = 0, l = scope.toasters.length; i < l; i++) {
                     var toast = scope.toasters[i];
                     if(toast.uid && toast.uid === uid) {
+                      scope.removeToast(toast.id);
                       dupe = true;
                       break;
                     }
                   }
                 }
 
-                !dupe && addToast(toaster.toast);
+                addToast(toaster.toast);
               });
 
               $rootScope.$on('toaster-clearToasts', function() {
