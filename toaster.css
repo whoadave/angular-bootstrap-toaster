@@ -69,7 +69,6 @@ button.toast-close-button {
 .toast-top-center,
 .toast-top-right {
   top: 12px;
-  margin-bottom: 6px;
 }
 .toast-top-left {
   left: 12px;
@@ -81,7 +80,6 @@ button.toast-close-button {
 .toast-bottom-center,
 .toast-bottom-left {
   bottom: 12px;
-  margin-top: 6px;
 }
 .toast-bottom-right {
   right: 12px;
@@ -132,6 +130,16 @@ button.toast-close-button {
   box-shadow: 0 0 12px #000;
   opacity: 1;
   cursor: pointer;
+}
+.toast-top-left > div,
+.toast-top-center > div,
+.toast-top-right > div {
+  margin-bottom: 6px;
+}
+.toast-bottom-right > div,
+.toast-bottom-center > div,
+.toast-bottom-left > div {
+  margin-top: 6px;
 }
 /*.toast-container > .bg-info,
 .toast-container > .bg-primary {
