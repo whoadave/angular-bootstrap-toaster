@@ -65,26 +65,28 @@ button.toast-close-button {
   right: 0;
   width: 100%;
 }
-.toast-top-left {
-  top: 12px;
-  left: 12px;
-}
-.toast-top-center {
-  top: 12px;
-}
+.toast-top-left,
+.toast-top-center,
 .toast-top-right {
   top: 12px;
+  margin-bottom: 6px;
+}
+.toast-top-left {
+  left: 12px;
+}
+.toast-top-right {
   right: 12px;
+}
+.toast-bottom-right,
+.toast-bottom-center,
+.toast-bottom-left {
+  bottom: 12px;
+  margin-top: 6px;
 }
 .toast-bottom-right {
   right: 12px;
-  bottom: 12px;
-}
-.toast-bottom-center {
-  bottom: 12px;
 }
 .toast-bottom-left {
-  bottom: 12px;
   left: 12px;
 }
 .toast-center {
@@ -113,6 +115,7 @@ button.toast-close-button {
   box-sizing: border-box;
 }
 .toast-container > div {
+  position: relative;
   padding: 25px 25px 25px 75px;
   width: 400px;
   border-radius: 3px;
