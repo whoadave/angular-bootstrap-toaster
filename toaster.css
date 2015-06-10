@@ -13,6 +13,7 @@
   font-size: 18px;
   margin-top: 2px;
   color: inherit;
+  font-weight: 100;
 }
 .toast-message {
   -ms-word-wrap: break-word;
@@ -20,10 +21,10 @@
 }
 .toast-message a,
 .toast-message label {
-  color: #ffffff;
+  color: #fff;
 }
 .toast-message a:hover {
-  color: #cccccc;
+  color: #ccc;
   text-decoration: none;
 }
 
@@ -33,21 +34,15 @@
   top: -0.3em;
   float: right;
   font-size: 20px;
-  font-weight: bold;
-  -webkit-text-shadow: 0 1px 0 #ffffff;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.8;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  filter: alpha(opacity=80);
+  font-weight: 100;
+  opacity: .8;
   color: inherit;
 }
 .toast-close-button:hover,
 .toast-close-button:focus {
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.4;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  filter: alpha(opacity=40);
+  opacity: .5;
 }
 
 /*Additional properties for button version
@@ -119,30 +114,23 @@ button.toast-close-button {
 }
 #toast-container > div {
   margin: 0 0 6px;
-  padding: 15px 20px 15px 50px;
-  width: 300px;
-  -moz-border-radius: 3px 3px 3px 3px;
-  -webkit-border-radius: 3px 3px 3px 3px;
-  border-radius: 3px 3px 3px 3px;
-  background-position: 15px 15px;
+  padding: 25px 25px 25px 75px;
+  width: 400px;
+  border-radius: 3px;
+  background-position: 25px 15px;
   background-repeat: no-repeat;
-  -moz-box-shadow: 0 0 12px #999999;
-  -webkit-box-shadow: 0 0 12px #999999;
-  box-shadow: 0 0 12px #999999;
-  opacity: 0.8;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  filter: alpha(opacity=80);
+  box-shadow: 0 0 12px #666;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .9);
+  opacity: .85;
+  transition: opacity 100ms;
 }
-#toast-container > :hover {
-  -moz-box-shadow: 0 0 12px #000000;
-  -webkit-box-shadow: 0 0 12px #000000;
-  box-shadow: 0 0 12px #000000;
+#toast-container > div:hover {
+  box-shadow: 0 0 12px #000;
   opacity: 1;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  filter: alpha(opacity=100);
   cursor: pointer;
 }
-#toast-container > .bg-info,
+/*#toast-container > .bg-info,
 #toast-container > .bg-primary {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=") !important;
 }
@@ -158,39 +146,34 @@ button.toast-close-button {
 #toast-container > .bg-warning {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=") !important;
 }
+*/
+#toast-container>div>i {
+  position: absolute;
+  top: 28px;
+  left: 25px;
+  font-size: 28px;
+}
 #toast-container.toast-top-full-width > div,
 #toast-container.toast-bottom-full-width > div {
   width: 96%;
   margin: auto;
 }
 .toast-actions {
-  margin: 16px 0;
+  margin: -25px -25px -25px -75px;
+}
+.toast-actions .btn {
+  text-transform: uppercase;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-width: 1px 0 1px 0;
+}
+.toast-actions .btn:first-child {
+  border-left-width: 0;
 }
 /*Responsive Design*/
 @media all and (max-width: 240px) {
   #toast-container > div {
-    padding: 8px 8px 8px 50px;
-    width: 11em;
-  }
-  #toast-container .toast-close-button {
-    right: -0.2em;
-    top: -0.2em;
-  }
-}
-@media all and (min-width: 241px) and (max-width: 480px) {
-  #toast-container  > div {
-    padding: 8px 8px 8px 50px;
-    width: 18em;
-  }
-  #toast-container .toast-close-button {
-    right: -0.2em;
-    top: -0.2em;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 768px) {
-  #toast-container > div {
-    padding: 15px 15px 15px 50px;
-    width: 25em;
+    max-width: 90%;
   }
 }
 
@@ -210,7 +193,7 @@ button.toast-close-button {
 
 :not(.no-enter)#toast-container > div.ng-enter.ng-enter-active,
 :not(.no-leave)#toast-container > div.ng-leave {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 :not(.no-leave)#toast-container > div.ng-leave.ng-leave-active,

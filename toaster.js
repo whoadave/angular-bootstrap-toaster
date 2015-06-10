@@ -42,7 +42,15 @@
               uid: uid
             };
           }
+          this.toast.icon = this.getIcon(this.toast.type);
+
           $rootScope.$emit('toaster-newToast');
+        };
+
+        this.getIcon = function(type) {
+          if(type === 'error' || type === 'warning') return 'alert';
+          if(type === 'success') return 'ok';
+          return 'info-sign';
         };
 
         this.clear = function() {
@@ -221,6 +229,7 @@
             '<div id="toast-container" ng-class="[config.position, config.animation]">' +
               '<div ng-repeat="toaster in toasters" class="toast" ng-class="toaster.type" ng-click="click(toaster)" ng-mouseover="stopTimer(toaster)"  ng-mouseout="restartTimer(toaster)" id="{{toast.uid || \'toast-\' + $index}}">' +
                 '<button class="toast-close-button" ng-show="config.closeButton" ng-click="click(toaster, true)">&times;</button>' +
+                '<i class="glyphicon glyphicon-{{toaster.icon}}"></i>' +
                 '<h3 ng-class="config.title">{{toaster.title}}</h3>' +
                 '<div ng-class="config.message" ng-switch on="toaster.bodyOutputType">' +
                   '<div ng-switch-when="trustedHtml" ng-bind-html="toaster.html"></div>' +
@@ -229,7 +238,7 @@
                 '<div ng-switch-default >{{toaster.body}}</div>' +
                 '</div>' +
                 '<div ng-if="toaster.actions" class="toast-actions">' +
-                  '<button ng-repeat="action in toaster.actions" class="btn {{action.buttonStyle || \'btn-primary\'}}" ng-click="action.click();click(toaster, true)">{{action.text}}</button>' +
+                  '<button ng-repeat="action in toaster.actions" class="btn {{action.buttonStyle}}" ng-click="action.click();click(toaster, true)">{{action.text}}</button>' +
                 '</div>' +
               '</div>' +
             '</div>'
