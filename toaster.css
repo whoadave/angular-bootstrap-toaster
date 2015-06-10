@@ -29,9 +29,9 @@
 }
 
 .toast-close-button {
-  position: relative;
-  right: -0.35em;
-  top: -0.3em;
+  position: absolute;
+  right: 25px;
+  top: 15px;
   float: right;
   font-size: 20px;
   font-weight: 100;
