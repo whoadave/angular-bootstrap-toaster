@@ -226,7 +226,7 @@
               };
             }],
             template:
-            '<div id="toast-container" ng-class="[config.position, config.animation]">' +
+            '<div id="toast-container" class="toast-container" ng-class="[config.position, config.animation]">' +
               '<div ng-repeat="toaster in toasters" class="toast" ng-class="toaster.type" ng-click="click(toaster)" ng-mouseover="stopTimer(toaster)"  ng-mouseout="restartTimer(toaster)" id="{{toast.uid || \'toast-\' + $index}}">' +
                 '<button class="toast-close-button" ng-show="config.closeButton" ng-click="click(toaster, true)">&times;</button>' +
                 '<i class="glyphicon glyphicon-{{toaster.icon}}"></i>' +
