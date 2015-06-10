@@ -238,7 +238,7 @@
                 '<div ng-switch-default >{{toaster.body}}</div>' +
                 '</div>' +
                 '<div ng-if="toaster.actions" class="toast-actions">' +
-                  '<button ng-repeat="action in toaster.actions" class="btn {{action.buttonStyle}}" ng-click="action.click();click(toaster, true)">{{action.text}}</button>' +
+                  '<button ng-repeat="action in toaster.actions" class="btn btn-block {{action.buttonStyle}}" ng-click="action.click();click(toaster, true)">{{action.text}}</button>' +
                 '</div>' +
               '</div>' +
             '</div>'

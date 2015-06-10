@@ -124,6 +124,7 @@ button.toast-close-button {
   background-color: rgba(0, 0, 0, .9);
   opacity: .85;
   transition: opacity 100ms;
+  color: #fff;
 }
 #toast-container > div:hover {
   box-shadow: 0 0 12px #000;
@@ -159,13 +160,14 @@ button.toast-close-button {
   margin: auto;
 }
 .toast-actions {
-  margin: -25px -25px -25px -75px;
+  margin: 25px -25px -25px -75px;
 }
 .toast-actions .btn {
   text-transform: uppercase;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0 0 1px;
+  padding: 18px;
 }
 .toast-actions .btn:first-child {
   border-left-width: 0;
