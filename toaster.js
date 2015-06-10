@@ -74,7 +74,8 @@
           wait: 'bg-wait bg-info',
           danger: 'bg-danger',
           success: 'bg-success',
-          warning: 'bg-warning'
+          warning: 'bg-warning',
+          error: 'bg-error'
         },
         'body-output-type': '', // Options: '', 'trustedHtml', 'template'
         'body-template': 'toasterBodyTmpl.html',
