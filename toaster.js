@@ -48,7 +48,7 @@
         };
 
         this.getIcon = function(type) {
-          if(type === 'error' || type === 'warning') return 'alert';
+          if(type === 'error' || type === 'warning' || type === 'danger') return 'alert';
           if(type === 'success') return 'ok';
           return 'info-sign';
         };
